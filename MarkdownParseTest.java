@@ -17,7 +17,7 @@ public class MarkdownParseTest {
     public void getLinksTest() throws IOException {
         List<String> expectedList = List.of("https://something.com","some-thing.html");
 
-        Path fileName = Path.of("/Users/matveyvilkin/Documents/GitHub/markdown-parser/test-file.md");
+        Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         assertEquals(expectedList, links);
@@ -27,7 +27,7 @@ public class MarkdownParseTest {
     public void getLinksTest2() throws IOException {
         List<String> expectedList = List.of("https://something.com","some-page.html");
 
-        Path fileName = Path.of("/Users/matveyvilkin/Documents/GitHub/markdown-parser/test-file2.md");
+        Path fileName = Path.of("test-file2.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         assertEquals(expectedList, links);
@@ -38,7 +38,7 @@ public class MarkdownParseTest {
     public void getLinksTest3() throws IOException {
         List<String> expectedList = new ArrayList<>();
 
-        Path fileName = Path.of("/Users/matveyvilkin/Documents/GitHub/markdown-parser/test-file3.md");
+        Path fileName = Path.of("test-file3.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         assertEquals(expectedList, links);
@@ -48,7 +48,7 @@ public class MarkdownParseTest {
     public void getLinksTest5() throws IOException {
         List<String> expectedList = List.of("https://something.com","some-page.html");
 
-        Path fileName = Path.of("/Users/matveyvilkin/Documents/GitHub/markdown-parser/test-file2.md");
+        Path fileName = Path.of("test-file2.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         assertEquals(expectedList, links);
